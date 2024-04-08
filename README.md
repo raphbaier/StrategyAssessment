@@ -42,7 +42,7 @@ not previously considered.
 
 
 ### Check it out!
-<span style="font-size:larger;">You can try the demo at: https://strategy-assessment.com</span>
+<span style="font-size:larger;">You can try out the prototype at: https://strategy-assessment.com</span>
 
 To get started, work your way through the demo that opens at "I don't get it".
 
