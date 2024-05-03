@@ -1,6 +1,6 @@
 # Strategy Assessment
 
-An application designed to support trading decisions for investors.
+An application designed to support trading decisions for investors (link: https://strategy-assessment.com )
 
 
 ![](preview.png)
