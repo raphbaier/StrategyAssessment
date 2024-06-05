@@ -1,0 +1,351 @@
+html, body {
+    height: 100%;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+.warning-message {
+  padding: 10px;
+  background-color: #ffcc00; /* Light yellow background */
+  color: #333; /* Dark text color for contrast */
+  border-left: 5px solid #ff9900; /* Darker yellow/orange border on the left */
+  margin-bottom: 15px; /* Add some space below the message */
+  border-radius: 5px; /* Optional: adds rounded corners */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Optional: adds a subtle shadow */
+  font-weight: bold; /* Make the text bold */
+}
+
+.top-middle-container {
+    text-align: center; /* Center align text and button */
+    position: fixed; /* Position fixed to place it relative to the viewport */
+    top: 0; /* Align to top */
+    left: 50%; /* Move to middle */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it's above other elements */
+    background-color: rgba(184, 184, 184, 0.9); /* Optional: background color */
+    padding: 20px 0; /* Some padding at the top and bottom */
+
+
+    display: flex;
+  flex-direction: column;
+    max-height: 100vh; /* or another value that suits your layout */
+
+    box-sizing: border-box; /* Include padding and border in the element's size */
+
+    overflow-y: auto;
+}
+
+
+
+.message {
+    font-size: 34px; /* Larger text */
+    margin: 0 0 10px 0px; /* Adjust spacing as needed */
+    padding-bottom: 5px;
+}
+
+/* In your component's CSS file */
+.normal-select {
+  font-size: 15px; /* Smaller font size */
+  padding: 5px; /* Reduced padding */
+  height: 60px; /* Smaller height */
+  /* Optionally, you can also set a specific width if needed */
+}
+
+.message select {
+    font-size: 40px; /* Slightly smaller than the message text, but still large */
+    margin-top: 0px; /* Add some space above the dropdown */
+    padding: 5px 10px; /* Padding for better touch interaction and visual appeal */
+    vertical-align: middle; /* Aligns dropdown with the text */
+}
+
+.topString {
+  font-size: 24px; /* Larger text */
+  padding-bottom: 4px;
+}
+
+/* Optional: Style for the dropdown options */
+.message option {
+    font-size: 40px; /* Large text for options */
+}
+
+
+
+
+button {
+    font-size: 20px; /* Bigger button text */
+    padding: 10px 20px; /* Padding inside the button */
+}
+
+
+#cy {
+    width: 100%;
+    height: 80%; /* Now this should be 80% of the viewport height */
+}
+
+
+.more-link {
+    color: #165346;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .more-link:hover {
+    color: rgb(68, 209, 190); /* Change color on hover if desired */
+  }
+
+
+
+  .more-link-large {
+    font-size: 30px;
+    color: #165346;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  .more-link-large:hover {
+    color: rgb(68, 209, 190); /* Change color on hover if desired */
+  }
+
+
+
+
+.top-middle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* Add other styling as needed, such as padding, margins, etc. */
+
+
+  }
+
+  /* Additional styles for spacing and alignment */
+  .top-middle-container > * {
+    margin-bottom: 0px;  /*Adjust as needed for spacing */
+  }
+
+
+
+
+  .bottom-middle-container {
+    text-align: center; /* Center align text and button */
+    position: fixed; /* Position fixed to place it relative to the viewport */
+    bottom: 0; /* Align to top */
+    left: 50%; /* Move to middle */
+    transform: translateX(-50%); /* Adjust for exact centering */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it's above other elements */
+    background-color: rgba(184, 184, 184, 0.9);
+    padding: 2px 0; /* Some padding at the top and bottom */
+}
+
+.image-container {
+    width: 20px; /* Adjust the size of the container */
+    height: 20px; /* Adjust the size of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+
+  }
+
+  .info-image {
+    max-width: 200%;
+    max-height: 200%;
+    margin-top: 30px;
+  }
+
+  .info-icon-outer-container {
+    width: 100px; /* Adjust this width to match the space needed for the "!" icon */
+    display: flex;
+}
+
+.info-icon-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .info-icon {
+    font-size: 48px;
+    margin-right: 1px;
+    background-color: rgba(255, 0, 0, 0.99); /* Red with opacity */
+    padding: 5px;
+    border-radius: 100%; /* Optional: to make it circular */
+  }
+
+  .info-icon-container div {
+    position: absolute;
+    background-color: rgba(255, 0, 0, 0.6); /* Red with opacity */
+    padding: 10px;
+    border-radius: 10px; /* Optional: for rounded corners */
+    margin-top: 10px; /* Spacing between icon and text */
+    margin-left: 60px;
+    margin-right: 10px;
+  }
+
+
+  .invalid-input-message {
+    position: absolute;
+    top: -30px; /* Adjust as necessary to position above the button */
+    left: 50%;
+    transform: translateX(-50%); /* Center above the button */
+    background-color: red;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 0.8rem;
+    /* Arrow */
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -10px; /* Adjust arrow position */
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 5px;
+      border-style: solid;
+      border-color: red transparent transparent transparent;
+    }
+  }
+
+  .text-content-container {
+    /* Adjust the max-width as needed */
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: middle; /* Ensures text is aligned to the left */
+    font-size: 22px;
+}
+
+.content-toggle {
+  transition: opacity 0.5s ease, max-height 0.5s ease;
+  opacity: 1;
+  max-height: 80%; /* Adjust based on content size */
+
+}
+
+.hide-content {
+  display: none;
+}
+
+.content-container {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start; /* Align items to the top */
+  margin: 10px -70px 0px 0px; /* Adjust spacing as needed */
+}
+
+.icon-button, .standard-button {
+  border: none;
+  background-color: #50bda5;
+  color: white;
+  padding: 15px; /* Increased padding */
+  font-size: 18px; /* Increased font size */
+  cursor: pointer;
+  border-radius: 6px; /* Slightly larger border-radius */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.icon-button .material-icons, .standard-button .material-icons {
+  font-size: 24px; /* Increased icon size */
+}
+
+.icon-button:hover, .standard-button:hover {
+  background-color: #42ebc6;
+}
+
+/* Tooltip text */
+.icon-button[title]:hover:after, .standard-button[title]:hover:after {
+  content: attr(title);
+  position: absolute;
+  bottom: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #555;
+  color: #fff;
+  padding: 6px 12px; /* Slightly larger tooltip padding */
+  border-radius: 6px; /* Slightly larger border-radius for tooltip */
+  font-size: 16px; /* Slightly larger font size for tooltip */
+  white-space: nowrap;
+}
+
+/* Hide tooltip text by default */
+.icon-button[title]:after, .standard-button[title]:after {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+}
+
+/* Show tooltip text on hover */
+.icon-button[title]:hover:after, .standard-button[title]:hover:after {
+  visibility: visible;
+  opacity: 1;
+}
+
+.icon-button-disabled, .icon-button-disabled .material-icons {
+  color: #cccccc; /* Grey out */
+  cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+}
+
+
+/* Button styles */
+.icon-button {
+  position: relative; /* Needed for absolute positioning of the tooltip */
+  border: none;
+  background-color: #50bda5;
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tooltip styles */
+.icon-button::after {
+  content: attr(data-tooltip); /* Use the data-tooltip attribute as content */
+  visibility: hidden;
+  opacity: 0;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -100%; /* Position the tooltip below the button */
+  left: 50%;
+  transform: translateX(-50%) translateY(-5px); /* Center the tooltip and move it up a bit */
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Show the tooltip when hovering over the button */
+.icon-button:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.info-button {
+  position: relative; /* Needed for absolute positioning of the tooltip */
+  border: none;
+  background-color: #ffbebe;
+  color: rgb(255, 0, 0);
+  padding: 15px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+

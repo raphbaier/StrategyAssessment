@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spass-frontend-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: spass-frontend
+  template:
+    metadata:
+      labels:
+        app: spass-frontend
+    spec:
+      containers:
+        - name: spass-frontend
+          image: 733590984378.dkr.ecr.eu-central-1.amazonaws.com/spass-frontend:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

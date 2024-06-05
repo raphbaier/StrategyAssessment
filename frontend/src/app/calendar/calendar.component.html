@@ -1,0 +1,8 @@
+<div class="calendar-container align-items-center">
+  <mat-form-field appearance="fill">
+    <mat-label>Spotlight Day</mat-label>
+    <input matInput [matDatepicker]="picker" [min]="minDate" [max]="maxDate" [formControl]="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker [dateClass]="dateClass"></mat-datepicker>
+  </mat-form-field>
+</div>

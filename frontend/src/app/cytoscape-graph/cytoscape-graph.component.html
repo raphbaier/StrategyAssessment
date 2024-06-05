@@ -1,0 +1,88 @@
+<div class="top-middle-container">
+  <div *ngIf="noBackend" class="warning-message">Error: Backend unreachable.</div>
+  <p *ngIf="!noBackend" class="message">
+
+
+    Generate a
+    <select name="action" [(ngModel)]="selectedAction" (change) = "checkStrategy()" class="normal-select">
+        <option value="buy">BUY</option>
+        <option value="sell">SELL</option>
+    </select>
+    Signal for
+    <select name="stock" [(ngModel)]="selectedStock" (change) = "checkStrategy()" class="normal-select">
+        <option value="Bayer">Bayer</option>
+        <option value="Beiersdorf">Beiersdorf</option>
+        <option value="Merck">Merck</option>
+        <option value="Henkel">Henkel</option>
+    </select>
+</p>
+
+
+<p *ngIf="!noBackend" class="topString">{{ topString }}</p>
+
+<div  class="content-container" style="align-items: top; gap: 10px;" *ngIf="!noBackend" >
+
+
+  <app-calendar></app-calendar>
+
+  <button class="icon-button" (click)="addTriangleNodes()" [disabled]="maxLinchpins" data-tooltip="Add a new flow">
+    <span class="material-icons">add_circle</span>
+  </button>
+
+  <div class="button-container" style="position: relative;">
+
+    <button class="icon-button" (click)="getPerformance()" [disabled]="isLoading" data-tooltip="Check for improvements"
+        [class.icon-button-disabled]="isLoading">
+  <span class="material-icons">done_outline</span>
+</button>
+
+    <div *ngIf="!isValid" class="invalid-input-message">The strategy is incomplete</div>
+  </div>
+
+  <div class="info-icon-outer-container">
+    <div class="info-icon-container" *ngIf="showInfoIcon">
+
+
+      <button class="info-button" (click)="toggleInfo()" data-tooltip="info">
+  <span class="material-icons">smart_toy</span>
+</button>
+
+        <div *ngIf="showInfo">
+            <p>{{ winnerString }}</p>
+            <span *ngIf="try_it_shown" class="more-link-large" (click)="performAdaption()">
+              Try it!
+          </span>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <div>
+      <div [class.hide-content]="!showMore" class="content-toggle">
+      <div>
+
+        <div class="text-content-container">
+        </div>
+
+        <app-workflow></app-workflow>
+
+
+        </div>
+
+
+      </div>
+      <span class="more-link" (click)="toggleMore()">
+          {{ showMore ? 'I got it, thanks' : 'I don\'t get it' }}
+      </span>
+  </div>
+
+</div>
+
+<div #cy style="width: 100%"></div>
+
+
+<div class="bottom-middle-container">
+
+</div>

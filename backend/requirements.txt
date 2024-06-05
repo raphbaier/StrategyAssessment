@@ -1,0 +1,11 @@
+Flask
+Flask-Cors
+pandas
+requests
+pika
+werkzeug
+numpy
+deap
+networkx
+flask_restful
+DEAP

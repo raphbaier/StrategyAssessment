@@ -1,0 +1,25 @@
+<div class="workflow-container">
+    <div class="workflow-content">
+      <div class="description-container">
+        <h2>{{ currentStep.title }}</h2>
+        <p [innerHTML]="currentStep.description"></p>
+      </div>
+      <div class="video-container">
+        <video #videoPlayer controls muted style="max-width: 700px; height: auto;">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+    <div class="workflow-navigation">
+      <button class="icon-button" (click)="goToPreviousStep()" 
+      [ngStyle]="{'visibility': currentStepIndex === 0 ? 'hidden' : 'visible'}" 
+      data-tooltip="Go to the previous step">
+<span class="material-icons">arrow_back</span>
+</button>
+<button class="icon-button" (click)="goToNextStep()" 
+      [ngStyle]="{'visibility': currentStepIndex === steps.length - 1 ? 'hidden' : 'visible'}" 
+      data-tooltip="Go to the next step">
+<span class="material-icons">arrow_forward</span>
+</button>
+    </div>
+  </div>

@@ -1,0 +1,53 @@
+/* Override datepicker styles */
+.mat-datepicker-toggle,
+.mat-calendar {
+    color: #50bda5;
+}
+
+.mat-calendar-body-cell-content.mat-calendar-body-selected,
+.mat-calendar-body-cell-content.mat-calendar-body-active {
+    background-color: #50bda5;
+}
+
+.mat-form-field-underline, .mat-form-field-ripple {
+    background-color: #50bda5;
+}
+
+
+/* Override Angular Material Datepicker styles for odd days 
+::ng-deep .mat-calendar-body-cell:nth-child(odd) .mat-calendar-body-cell-content {
+  color: red !important;
+}
+
+
+*/
+
+::ng-deep .odd-date .mat-calendar-body-cell-content {
+  background-color: rgb(146, 70, 70) !important;
+  color: white !important;
+}
+
+::ng-deep .even-date .mat-calendar-body-cell-content {
+  background-color: rgb(58, 110, 58) ;
+  color: white ;
+}
+
+
+
+::ng-deep .special-date .mat-calendar-body-cell-content {
+  background-color: blue;
+  color: white;
+}
+
+
+::ng-deep .special-date-buy .mat-calendar-body-cell-content {
+  background-color: green;
+  color: white;
+}
+
+::ng-deep .special-date-sell .mat-calendar-body-cell-content {
+  background-color: red;
+  color: white;
+}
+
+
