@@ -1,6 +1,6 @@
 # Strategy Assessment
 
-An application designed to support trading decisions for investors (link: https://strategy-assessment.com )
+An application designed to support trading decisions for investors
 
 
 ![](preview.png)
@@ -61,4 +61,5 @@ To get started, work your way through the demo that opens at "I don't get it".
 
 
 
------ see our project https://donezone.de/
+----- see our project https://donezone.de/ made by https://head-scape.com
+
